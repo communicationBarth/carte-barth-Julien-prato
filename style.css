@@ -45,14 +45,12 @@ body { min-height:100vh; display:grid; place-items:center; padding:28px; }
   color:white; font-size:20px; cursor:pointer;
 }
 .portrait-wrap { display:flex; justify-content:center; margin-top:34px; }
-.portrait {
-  width:142px; height:142px; border-radius:50%;
-  display:grid; place-items:center;
-  background:rgba(255,255,255,.96);
-  color:var(--barth-gold);
-  font-size:37px; font-weight:600; letter-spacing:.04em;
-  border:5px solid rgba(255,255,255,.38);
-  box-shadow:0 18px 40px rgba(80,55,20,.18);
+display:grid;
+place-items:center;
+color:var(--barth-gold);
+font-size:37px;
+font-weight:600;
+letter-spacing:.04em;
 }
 .identity { text-align:center; color:white; margin-top:22px; }
 .kicker { font-size:10px; letter-spacing:.28em; margin:0 0 9px; opacity:.86; }
