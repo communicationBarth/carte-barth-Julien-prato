@@ -1,4 +1,3 @@
-
 ```css
 :root {
   --barth-gold: #C8A977;
@@ -36,17 +35,14 @@ body {
 }
 
 .card {
-  width: min(100%,430px);
+  width: min(100%, 430px);
   background: var(--cream);
   border-radius: 34px;
   overflow: hidden;
   box-shadow: 0 30px 90px rgba(24,20,14,.18);
 }
 
-
-/* =========================
-   PARTIE DORÉE
-========================= */
+/* PARTIE DORÉE */
 
 .hero {
   position: relative;
@@ -73,10 +69,7 @@ body {
   z-index: 2;
 }
 
-
-/* =========================
-   LOGO + PARTAGE
-========================= */
+/* LOGO + PARTAGE */
 
 .topbar {
   display: flex;
@@ -101,10 +94,7 @@ body {
   cursor: pointer;
 }
 
-
-/* =========================
-   PHOTO DE JULIEN
-========================= */
+/* PHOTO */
 
 .portrait-wrap {
   width: 125px;
@@ -123,16 +113,11 @@ body {
   display: block;
   object-fit: cover;
   object-position: center center;
-
-  /* Cadrage corrigé du PNG */
   transform: scale(2.2);
   transform-origin: center 38%;
 }
 
-
-/* =========================
-   IDENTITÉ
-========================= */
+/* IDENTITÉ */
 
 .identity {
   text-align: center;
@@ -174,10 +159,7 @@ body {
   font-size: 13px;
 }
 
-
-/* =========================
-   CONTENU
-========================= */
+/* CONTENU */
 
 .content {
   padding: 22px 24px 26px;
@@ -186,14 +168,11 @@ body {
   z-index: 3;
 }
 
-
-/* =========================
-   APPELER / EMAIL / SMS
-========================= */
+/* APPELER / EMAIL / SMS */
 
 .quick-actions {
   display: grid;
-  grid-template-columns: repeat(3,1fr);
+  grid-template-columns: repeat(3, 1fr);
   gap: 10px;
   margin-bottom: 18px;
 }
@@ -226,10 +205,7 @@ body {
   font-size: 16px;
 }
 
-
-/* =========================
-   LIENS
-========================= */
+/* LIENS */
 
 .panel {
   background: white;
@@ -274,10 +250,7 @@ body {
   font-weight: 400;
 }
 
-
-/* =========================
-   AJOUTER AUX CONTACTS
-========================= */
+/* BOUTON CONTACT */
 
 .contact-btn {
   margin-top: 16px;
@@ -305,10 +278,7 @@ body {
   color: white;
 }
 
-
-/* =========================
-   SIGNATURE
-========================= */
+/* SIGNATURE */
 
 .signature {
   display: flex;
@@ -331,10 +301,7 @@ body {
   margin: 0;
 }
 
-
-/* =========================
-   FOOTER
-========================= */
+/* FOOTER */
 
 footer {
   text-align: center;
@@ -353,13 +320,9 @@ footer p {
   margin: 7px 0 0;
 }
 
-
-/* =========================
-   VERSION MOBILE
-========================= */
+/* MOBILE */
 
 @media (max-width: 480px) {
-
   body {
     padding: 0;
     background: var(--cream);
@@ -381,4 +344,4 @@ footer p {
     font-size: 32px;
   }
 }
-
+```
