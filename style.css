@@ -1,4 +1,5 @@
 
+```css
 :root {
   --barth-gold: #C8A977;
   --barth-black: #111214;
@@ -42,8 +43,9 @@ body {
   box-shadow: 0 30px 90px rgba(24,20,14,.18);
 }
 
+
 /* =========================
-   HERO / PARTIE DORÉE
+   PARTIE DORÉE
 ========================= */
 
 .hero {
@@ -71,6 +73,11 @@ body {
   z-index: 2;
 }
 
+
+/* =========================
+   LOGO + PARTAGE
+========================= */
+
 .topbar {
   display: flex;
   align-items: center;
@@ -94,27 +101,51 @@ body {
   cursor: pointer;
 }
 
+
 /* =========================
-   PHOTO DE PROFIL
+   PHOTO DE JULIEN
 ========================= */
 
 .portrait-wrap {
-  display: flex;
-  justify-content: center;
-  margin-top: 32px;
+  width: 125px;
+  height: 125px;
+
+  margin: 32px auto 0;
+
+  border-radius: 50%;
+  overflow: hidden;
+
+  background: white;
+
+  border: 4px solid rgba(255,255,255,.45);
+
+  box-shadow:
+    0 18px 40px rgba(80,55,20,.18);
 }
 
 .portrait {
-  width: 125px;
-  height: 125px;
-  border-radius: 50%;
-  object-fit: cover;
-  object-position: center;
+  width: 100%;
+  height: 100%;
+
   display: block;
-  background: white;
-  border: 4px solid rgba(255,255,255,.42);
-  box-shadow: 0 18px 40px rgba(80,55,20,.18);
+
+  object-fit: cover;
+
+  /*
+  Permet de remonter légèrement
+  le visage dans le cercle
+  */
+  object-position: center 30%;
+
+  /*
+  Zoom sur le PNG pour supprimer
+  l'espace blanc autour de Julien
+  */
+  transform: scale(1.35);
+
+  transform-origin: center center;
 }
+
 
 /* =========================
    IDENTITÉ
@@ -123,14 +154,14 @@ body {
 .identity {
   text-align: center;
   margin-top: 20px;
-  color: var(--barth-white);
+  color: white;
 }
 
 .identity .kicker,
 .identity h1,
 .identity .role,
 .identity .location {
-  color: var(--barth-white) !important;
+  color: #FFFFFF !important;
 }
 
 .kicker {
@@ -142,54 +173,80 @@ body {
 
 .identity h1 {
   margin: 0;
+
   font-size: 34px;
   font-weight: 500;
+
   letter-spacing: -.035em;
   line-height: 1.05;
 }
 
 .role {
   margin: 8px 0 2px;
+
   font-size: 16px;
   font-weight: 600;
 }
 
 .location {
   margin: 0;
+
   opacity: .82;
+
   font-size: 13px;
 }
 
+
 /* =========================
-   CONTENU BAS
+   CONTENU
 ========================= */
 
 .content {
   padding: 22px 24px 26px;
+
   margin-top: -18px;
+
   position: relative;
   z-index: 3;
 }
 
+
+/* =========================
+   APPELER / EMAIL / SMS
+========================= */
+
 .quick-actions {
   display: grid;
-  grid-template-columns: repeat(3,1fr);
+
+  grid-template-columns: repeat(3, 1fr);
+
   gap: 10px;
+
   margin-bottom: 18px;
 }
 
 .quick {
   background: white;
+
   border-radius: 18px;
+
   min-height: 82px;
+
   display: flex;
   flex-direction: column;
+
   align-items: center;
   justify-content: center;
+
   text-decoration: none;
+
   color: var(--barth-black);
+
   border: 1px solid rgba(17,17,17,.04);
-  box-shadow: 0 10px 30px rgba(17,17,17,.06);
+
+  box-shadow:
+    0 10px 30px rgba(17,17,17,.06);
+
   font-size: 12px;
   font-weight: 600;
 }
@@ -197,33 +254,49 @@ body {
 .quick-icon {
   width: 34px;
   height: 34px;
+
   border-radius: 50%;
+
   display: grid;
   place-items: center;
+
   background: rgba(200,169,119,.14);
+
   color: var(--barth-gold);
+
   margin-bottom: 7px;
+
   font-size: 16px;
 }
 
+
 /* =========================
-   PANNEAU LIENS
+   LIENS
 ========================= */
 
 .panel {
   background: white;
+
   border-radius: 22px;
+
   overflow: hidden;
-  box-shadow: 0 10px 30px rgba(17,17,17,.05);
+
+  box-shadow:
+    0 10px 30px rgba(17,17,17,.05);
 }
 
 .row {
   display: flex;
+
   align-items: center;
   justify-content: space-between;
+
   text-decoration: none;
+
   color: var(--barth-black);
+
   padding: 17px 18px;
+
   border-bottom: 1px solid var(--line);
 }
 
@@ -233,55 +306,79 @@ body {
 
 .row span {
   display: flex;
+
   flex-direction: column;
+
   gap: 2px;
 }
 
 .row small {
   color: var(--muted);
+
   font-size: 11px;
 }
 
 .row strong {
   font-size: 14px;
+
   font-weight: 600;
 }
 
 .row b {
   color: var(--barth-gold);
+
   font-size: 18px;
+
   font-weight: 400;
 }
 
+
 /* =========================
-   BOUTON CONTACT
+   AJOUTER AUX CONTACTS
 ========================= */
 
 .contact-btn {
   margin-top: 16px;
+
   display: flex;
+
   align-items: center;
   justify-content: center;
+
   gap: 10px;
+
   width: 100%;
+
   padding: 16px;
+
   border-radius: 18px;
+
   background: var(--barth-black);
+
   color: white;
+
   text-decoration: none;
+
   font-weight: 600;
+
   font-size: 14px;
 }
 
 .contact-btn span {
   width: 25px;
   height: 25px;
+
   border-radius: 50%;
+
   display: grid;
+
   place-items: center;
+
   background: var(--barth-gold);
+
   color: white;
 }
+
 
 /* =========================
    SIGNATURE
@@ -289,24 +386,34 @@ body {
 
 .signature {
   display: flex;
+
   align-items: center;
+
   gap: 10px;
+
   margin: 24px 0 18px;
+
   color: var(--muted);
 }
 
 .signature .line {
   height: 1px;
+
   background: rgba(17,17,17,.10);
+
   flex: 1;
 }
 
 .signature p {
   font-size: 10px;
+
   letter-spacing: .06em;
+
   text-align: center;
+
   margin: 0;
 }
+
 
 /* =========================
    FOOTER
@@ -314,39 +421,50 @@ body {
 
 footer {
   text-align: center;
+
   color: var(--muted);
 }
 
 .footer-logo {
   width: 95px;
+
   opacity: .35;
+
   filter: grayscale(1);
 }
 
 footer p {
   font-size: 10px;
+
   letter-spacing: .12em;
+
   margin: 7px 0 0;
 }
 
+
 /* =========================
-   MOBILE
+   VERSION MOBILE
 ========================= */
 
 @media (max-width: 480px) {
+
   body {
     padding: 0;
+
     background: var(--cream);
   }
 
   .card {
     width: 100%;
+
     min-height: 100vh;
+
     border-radius: 0;
+
     box-shadow: none;
   }
 
-  .portrait {
+  .portrait-wrap {
     width: 118px;
     height: 118px;
   }
@@ -355,7 +473,4 @@ footer p {
     font-size: 32px;
   }
 }
-Et vérifie que dans ton index.html tu as bien :
-<div class="portrait-wrap">
-  <img src="julien-prato.jpg" alt="Julien Prato" class="portrait">
-</div>
+```
