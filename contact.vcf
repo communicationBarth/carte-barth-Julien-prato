@@ -1,0 +1,11 @@
+BEGIN:VCARD
+VERSION:3.0
+N:NOM;Prénom;;;
+FN:Prénom NOM
+ORG:BARTH Cabinet Immobilier
+TITLE:Conseiller en immobilier
+TEL;TYPE=CELL:+33600000000
+EMAIL:prenom.nom@cabinet-barth.com
+URL:https://www.cabinet-barth.com
+ADR;TYPE=WORK:;;;Rennes;;;France
+END:VCARD

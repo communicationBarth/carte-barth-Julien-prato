@@ -1,0 +1,113 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <meta name="theme-color" content="#C8A977" />
+  <title>Prénom NOM — BARTH Immobilier</title>
+  <meta name="description" content="Carte de visite digitale premium — BARTH Cabinet Immobilier" />
+  <link rel="stylesheet" href="style.css" />
+</head>
+<body>
+  <main class="screen">
+    <section class="card">
+      <div class="hero">
+        <div class="hero-overlay"></div>
+
+        <div class="topbar">
+          <img src="logo-barth.png" alt="BARTH Cabinet Immobilier" class="logo" />
+          <button class="icon-btn" id="shareButton" aria-label="Partager">↗</button>
+        </div>
+
+        <div class="portrait-wrap">
+          <div class="portrait">PN</div>
+        </div>
+
+        <div class="identity">
+          <p class="kicker">BARTH CABINET IMMOBILIER</p>
+          <h1>Prénom NOM</h1>
+          <p class="role">Conseiller en immobilier</p>
+          <p class="location">Rennes & métropole</p>
+        </div>
+      </div>
+
+      <div class="content">
+        <div class="quick-actions">
+          <a href="tel:+33600000000" class="quick">
+            <span class="quick-icon">☎</span>
+            <span>Appeler</span>
+          </a>
+          <a href="mailto:prenom.nom@cabinet-barth.com" class="quick">
+            <span class="quick-icon">✉</span>
+            <span>E-mail</span>
+          </a>
+          <a href="sms:+33600000000" class="quick">
+            <span class="quick-icon">◌</span>
+            <span>SMS</span>
+          </a>
+        </div>
+
+        <section class="panel">
+          <a class="row" href="https://www.cabinet-barth.com" target="_blank" rel="noopener">
+            <span>
+              <small>Site internet</small>
+              <strong>cabinet-barth.com</strong>
+            </span>
+            <b>↗</b>
+          </a>
+          <a class="row" href="https://www.instagram.com/" target="_blank" rel="noopener">
+            <span>
+              <small>Instagram</small>
+              <strong>@barthimmobilier</strong>
+            </span>
+            <b>↗</b>
+          </a>
+          <a class="row" href="https://maps.google.com/" target="_blank" rel="noopener">
+            <span>
+              <small>Agence</small>
+              <strong>Rennes</strong>
+            </span>
+            <b>↗</b>
+          </a>
+        </section>
+
+        <a class="contact-btn" href="contact.vcf" download>
+          <span>+</span>
+          Ajouter à mes contacts
+        </a>
+
+        <div class="signature">
+          <span class="line"></span>
+          <p>L'immobilier avec exigence et élégance.</p>
+          <span class="line"></span>
+        </div>
+
+        <footer>
+          <img src="logo-barth.png" alt="" class="footer-logo" />
+          <p>BARTH Cabinet Immobilier</p>
+        </footer>
+      </div>
+    </section>
+  </main>
+
+  <script>
+    const shareButton = document.getElementById('shareButton');
+    shareButton.addEventListener('click', async () => {
+      const data = {
+        title: 'Prénom NOM — BARTH Immobilier',
+        text: 'Voici ma carte de visite BARTH Immobilier.',
+        url: window.location.href
+      };
+      if (navigator.share) {
+        try { await navigator.share(data); } catch (e) {}
+      } else {
+        try {
+          await navigator.clipboard.writeText(window.location.href);
+          shareButton.textContent = '✓';
+          setTimeout(() => shareButton.textContent = '↗', 1600);
+        } catch (e) {}
+      }
+    });
+  </script>
+</body>
+</html>
